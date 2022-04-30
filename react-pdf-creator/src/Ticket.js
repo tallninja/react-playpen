@@ -85,11 +85,19 @@ const Ticket = () => {
 										<th>Phone</th>
 										<td>+254712345678</td>
 									</tr>
+									<tr>
+										<th>Seat#</th>
+										<td>14</td>
+									</tr>
+									<tr>
+										<th>Valid Until</th>
+										<td>25-04-2022</td>
+									</tr>
 								</tbody>
 							</table>
 							<div
 								id='amount'
-								className='bg-dark text-light d-flex justify-content-center h-auto p-3 mt-5'
+								className='bg-dark text-light d-flex justify-content-center h-auto p-3 mt-2'
 							>
 								<p className='h4'>Ksh 1000</p>
 							</div>
