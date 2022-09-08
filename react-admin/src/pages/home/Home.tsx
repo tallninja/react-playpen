@@ -1,5 +1,5 @@
 import './home.scss';
-import { Sidebar, Navbar } from '../../components';
+import { Sidebar, Navbar, Widget } from '../../components';
 
 export const Home = () => {
 	return (
@@ -7,7 +7,12 @@ export const Home = () => {
 			<Sidebar />
 			<div className='home-container'>
 				<Navbar />
-				<h1 className='title'>Home</h1>
+				<div className='widgets'>
+					<Widget type='users' />
+					<Widget type='orders' />
+					<Widget type='earnings' />
+					<Widget type='balance' />
+				</div>
 			</div>
 		</div>
 	);
