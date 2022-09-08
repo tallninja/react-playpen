@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import { Home, List, Login, Single, NotFound } from './pages';
+import { Home, Users, Login, User, NewUser, NotFound } from './pages';
 
 const App = () => {
 	return (
@@ -8,11 +8,14 @@ const App = () => {
 			<Routes>
 				<Route path='/'>
 					<Route index element={<Home />} />
-					<Route path='list' element={<List />} />
 					<Route path='login' element={<Login />} />
-					<Route path='single' element={<Single />} />
-					<Route path='*' element={<NotFound />} />
+					<Route path='users'>
+						<Route index element={<Users />} />
+						<Route path=':userId' element={<User />} />
+						<Route path='new' element={<NewUser />} />
+					</Route>
 				</Route>
+				<Route path='*' element={<NotFound />} />
 			</Routes>
 		</BrowserRouter>
 	);
