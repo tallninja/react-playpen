@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import { Home, List, Login, Single } from './pages';
+import { Home, List, Login, Single, NotFound } from './pages';
 
 const App = () => {
 	return (
@@ -11,6 +11,7 @@ const App = () => {
 					<Route path='list' element={<List />} />
 					<Route path='login' element={<Login />} />
 					<Route path='single' element={<Single />} />
+					<Route path='*' element={<NotFound />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>
