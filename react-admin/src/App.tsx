@@ -1,10 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
 import { Home, Users, Login, User, NewUser, NotFound } from './pages';
+import { Navbar } from './components';
 
 const App = () => {
 	return (
 		<BrowserRouter>
+			<Navbar />
 			<Routes>
 				<Route path='/'>
 					<Route index element={<Home />} />
